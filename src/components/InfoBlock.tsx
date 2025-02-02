@@ -16,7 +16,6 @@ const InfoBlock: React.FC<InfoBlockProps> = ({ title, children }) => {
       <a href="https://example.com/news1">
         <h3 className="info-title">{title}</h3>
       </a>
-
       <div className="info-content">{children}</div>
     </div>
   );

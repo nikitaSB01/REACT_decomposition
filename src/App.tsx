@@ -5,6 +5,7 @@ import NewsList from "./components/NewsList";
 import ErrorWork from "./components/ErrorWork";
 import Advertising from "./components/Advertising";
 import Weather from "./components/Weather";
+import Visited from "./components/Visited";
 
 function App() {
   return (
@@ -24,8 +25,8 @@ function App() {
         </div>
         <Advertising />
         <div>
-          {" "}
           <Weather />
+          <Visited />
         </div>
       </div>
     </div>
