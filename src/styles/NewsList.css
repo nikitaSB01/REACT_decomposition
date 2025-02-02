@@ -1,8 +1,8 @@
 .news-list {
-    margin-left: 15%;
-    /* border: 1px solid #ccc; */
+    /* margin-left: 15%; */
     padding: 15px;
     padding-bottom: 0;
+    min-width: 500px;
     max-width: 500px;
 }
 

@@ -1,9 +1,8 @@
 .exchange-rates {
-    margin-left: 20%;
-
     display: flex;
-    gap: 20px;
-    /* padding: 10px; */
+    align-self: flex-start;
+    margin-left: 50px;
+    gap: 10px;
     background-color: #f9f9f9;
     max-width: 600px;
 }
@@ -20,7 +19,7 @@
 }
 
 .rate-value {
-    margin: 0 10px 0 10px;
+    margin: 0 5px 0 5px;
     font-size: 18px;
     color: #000;
 }

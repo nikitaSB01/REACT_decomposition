@@ -1,10 +1,9 @@
-/* import { useState } from "react"; */
 import "../styles/Header.css";
 
 /**
- * Header – отображает логотип, поисковую строку и кнопку поиска в одну линию.
+ * Header – отображает ссылки навигации и строку поиска с кнопкой,
+ * при этом логотип выравнивается по горизонтали с поисковой строкой.
  */
-
 const Header = () => {
   // Данные для списка ссылок
   const linksData = [
@@ -13,13 +12,14 @@ const Header = () => {
     { text: "Новости", link: "https://example.com/news" },
     { text: "Карты", link: "https://example.com/maps" },
     { text: "Маркет", link: "https://example.com/market" },
-    { text: "Переводчик", link: "https://example.com/market" },
-    { text: "Эфир", link: "https://example.com/market" },
-    { text: "еще", link: "https://example.com/market" },
+    { text: "Переводчик", link: "https://example.com/translator" },
+    { text: "Эфир", link: "https://example.com/broadcast" },
+    { text: "Ещё", link: "https://example.com/more" },
   ];
 
   return (
-    <header className="header">
+    <div className="header">
+      {/* Ссылки навигации */}
       <div className="header__links">
         <ul className="links-list">
           {linksData.map((item, index) => (
@@ -31,7 +31,9 @@ const Header = () => {
           ))}
         </ul>
       </div>
-      <div className="header__body">
+
+      {/* Контейнер с логотипом и поисковой строкой */}
+      <div className="search-container">
         <div className="logo">
           my<span className="highlight">Яндекс</span>
         </div>
@@ -42,8 +44,7 @@ const Header = () => {
         />
         <button className="search-button">Найти</button>
       </div>
-      <div className="header__footer"></div>
-    </header>
+    </div>
   );
 };
 

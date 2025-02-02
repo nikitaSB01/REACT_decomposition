@@ -1,45 +1,68 @@
 .header {
-    min-width: 1200px;
     display: flex;
-    /*     align-items: center;*/
-    justify-content: space-between;
-    flex-direction: column;
-
-    padding: 10px 20px;
-    /*     border: 1px solid #ccc; */
-    /* background-color: #fff; */
-}
-
-.header__links {
-    margin: 0 0 10px 20%;
-}
-
-.header__body {
+    flex-direction: column; /* Размещаем ссылки сверху, поиск снизу */
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto; /* Центрируем весь блок по горизонтали */
 }
 
+/* Стили для списка ссылок */
+.header__links {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.links-list {
+    display: flex;
+    justify-content: flex-start; /* Выравнивание ссылок по левому краю */
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-list a {
+    text-decoration: none;
+    color: #1a73e8; /* Синий цвет для ссылок */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.links-list a:hover {
+    text-decoration: underline;
+}
+
+/* Контейнер для логотипа и поисковой строки */
+.search-container {
+    display: flex;
+    align-items: center; /* Выравниваем логотип и строку поиска по вертикали */
+    width: 100%;
+}
+
+/* Логотип */
 .logo {
-    font-size: 34px;
+    font-size: 24px;
     font-weight: bold;
     color: #000;
-    margin-right: 20px;
+    margin-right: 15px;
+    white-space: nowrap; /* Предотвращает перенос логотипа на новую строку */
 }
 
 .logo .highlight {
     color: #ff0000; /* Красный цвет для слова "Яндекс" */
 }
 
+/* Поисковая строка */
 .search-input {
-    flex: 1; /* Заставляет поле растягиваться на всё доступное пространство */
+    flex: 1; /* Растягиваем поле ввода на всю доступную ширину */
     padding: 8px 12px;
-    margin: 0 10px;
+    margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
 }
 
+/* Кнопка "Найти" */
 .search-button {
     padding: 8px 20px;
     border: 1px solid #ccc;
@@ -52,25 +75,4 @@
 
 .search-button:hover {
     background-color: #ffc107;
-}
-.links-container {
-    padding: 20px;
-}
-
-.links-list {
-    list-style: none; /* Убираем маркеры списка */
-    padding: 0;
-    margin: 0;
-    display: flex; /* Делаем ссылки в одну строку */
-    gap: 15px; /* Отступ между ссылками */
-}
-
-.links-list a {
-    text-decoration: none; /* Убираем подчеркивание */
-    color: #007bff; /* Цвет ссылок */
-    font-size: 16px;
-}
-
-.links-list a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
 }

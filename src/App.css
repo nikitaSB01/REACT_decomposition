@@ -1,7 +1,7 @@
 html,
 body,
 #root {
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0 auto;
   padding: 0;
 }
@@ -12,9 +12,54 @@ body {
   align-items: flex-start;
   background-color: #f9f9f9;
 }
+.App {
+  min-width: 1100px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  /*   background-color: #f5f5f5;
+ */
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
 
-.app {
-  height: 100%;
+/* Контейнер для всех блоков в вертикальном столбце */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Горизонтальное расположение NewsList и ErrorWork */
+.top-section {
+  display: flex;
+  gap: 40px;
+}
+
+/* Контейнер для логотипа и шапки */
+.header-container {
+  display: flex;
+  margin-top: 20px;
+  align-items: center; /* Выравнивание по вертикали */
+  position: relative;
   width: 100%;
-  background-color: #f0f0f0; /* Чтобы увидеть, что контейнер занимает всю страницу */
+  max-width: 800px;
+}
+
+/* Логотип размещаем левее основного контента */
+.logo {
+  position: absolute;
+  left: -120px; /* Смещаем логотип влево */
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.logo .highlight {
+  color: #ff0000; /* Красный цвет для слова "Яндекс" */
+}
+
+/* Стили для шапки */
+.header {
+  flex: 1;
 }
