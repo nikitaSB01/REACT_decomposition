@@ -1,0 +1,39 @@
+.exchange-rates {
+    margin-left: 20%;
+
+    display: flex;
+    gap: 20px;
+    /* padding: 10px; */
+    background-color: #f9f9f9;
+    max-width: 600px;
+}
+
+.rate-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.rate-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.rate-value {
+    margin: 0 10px 0 10px;
+    font-size: 18px;
+    color: #000;
+}
+
+.rate-change {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
