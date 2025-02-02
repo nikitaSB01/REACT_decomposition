@@ -1,0 +1,76 @@
+.header {
+    min-width: 1200px;
+    display: flex;
+    /*     align-items: center;*/
+    justify-content: space-between;
+    flex-direction: column;
+
+    padding: 10px 20px;
+    /*     border: 1px solid #ccc; */
+    /* background-color: #fff; */
+}
+
+.header__links {
+    margin: 0 0 10px 20%;
+}
+
+.header__body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: bold;
+    color: #000;
+    margin-right: 20px;
+}
+
+.logo .highlight {
+    color: #ff0000; /* Красный цвет для слова "Яндекс" */
+}
+
+.search-input {
+    flex: 1; /* Заставляет поле растягиваться на всё доступное пространство */
+    padding: 8px 12px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 8px 20px;
+    border: 1px solid #ccc;
+    background-color: #ffd700;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.search-button:hover {
+    background-color: #ffc107;
+}
+.links-container {
+    padding: 20px;
+}
+
+.links-list {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Делаем ссылки в одну строку */
+    gap: 15px; /* Отступ между ссылками */
+}
+
+.links-list a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #007bff; /* Цвет ссылок */
+    font-size: 16px;
+}
+
+.links-list a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}

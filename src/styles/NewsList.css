@@ -1,8 +1,8 @@
 .news-list {
-    border: 1px solid #ccc;
+    margin-left: 15%;
+    /* border: 1px solid #ccc; */
     padding: 15px;
     max-width: 500px;
-    background-color: #f9f9f9;
 }
 
 .news-tabs {
@@ -56,4 +56,19 @@
     margin-top: 10px;
     font-size: 14px;
     color: gray;
+}
+
+.show-more {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.show-more:hover {
+    background-color: #0056b3;
 }
