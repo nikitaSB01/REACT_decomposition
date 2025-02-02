@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import ExchangeRates from "./components/ExchangeRates";
 import NewsList from "./components/NewsList";
 import ErrorWork from "./components/ErrorWork";
+import Advertising from "./components/Advertising";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <div className="header-container">
           <Header />
         </div>
+        <Advertising />
       </div>
     </div>
   );

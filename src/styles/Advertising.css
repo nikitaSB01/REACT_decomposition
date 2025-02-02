@@ -1,0 +1,28 @@
+.advertising-box {
+    width: 100%;
+    max-width: 800px; /* Ограничиваем ширину до 800px */
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.advertising-container {
+    width: 100%;
+    position: relative;
+}
+
+.advertising-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Обрезаем, чтобы заполнить контейнер */
+    object-position: center; /* Центрируем изображение */
+    display: block;
+}
+
+/* Альтернативный вариант: если нужно обрезать изображение, чтобы оно полностью заполнило контейнер */
+.advertising-image.cover {
+    object-fit: cover; /* Обрезает изображение, чтобы оно полностью заполнило контейнер */
+    height: 150px; /* Задаём фиксированную высоту, если нужно */
+}
