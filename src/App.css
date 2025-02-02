@@ -35,6 +35,11 @@ body {
   display: flex;
   gap: 40px;
 }
+.bottom-section {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
 
 /* Контейнер для логотипа и шапки */
 .header-container {

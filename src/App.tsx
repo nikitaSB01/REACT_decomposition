@@ -6,6 +6,7 @@ import ErrorWork from "./components/ErrorWork";
 import Advertising from "./components/Advertising";
 import Weather from "./components/Weather";
 import Visited from "./components/Visited";
+import TVProgram from "./components/TVProgram";
 
 function App() {
   return (
@@ -24,9 +25,14 @@ function App() {
           <Header />
         </div>
         <Advertising />
-        <div>
-          <Weather />
-          <Visited />
+        <div className="bottom-section">
+          <div>
+            <Weather />
+            <Visited />
+          </div>
+          <div>
+            <TVProgram />
+          </div>
         </div>
       </div>
     </div>
