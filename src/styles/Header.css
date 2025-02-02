@@ -1,20 +1,20 @@
 .header {
     display: flex;
-    flex-direction: column; /* Размещаем ссылки сверху, поиск снизу */
+    flex-direction: column;
     width: 100%;
     max-width: 800px;
-    margin: 0 auto; /* Центрируем весь блок по горизонтали */
+    margin: 0 auto;
 }
 
 /* Стили для списка ссылок */
 .header__links {
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .links-list {
     display: flex;
-    justify-content: flex-start; /* Выравнивание ссылок по левому краю */
+    justify-content: flex-start;
     gap: 20px;
     list-style: none;
     padding: 0;
@@ -23,7 +23,7 @@
 
 .links-list a {
     text-decoration: none;
-    color: #1a73e8; /* Синий цвет для ссылок */
+    color: #1a73e8;
     font-weight: bold;
     font-size: 14px;
 }
@@ -35,8 +35,10 @@
 /* Контейнер для логотипа и поисковой строки */
 .search-container {
     display: flex;
-    align-items: center; /* Выравниваем логотип и строку поиска по вертикали */
+    align-items: center;
     width: 100%;
+    margin-bottom: 5px;
+
 }
 
 /* Логотип */
@@ -45,34 +47,52 @@
     font-weight: bold;
     color: #000;
     margin-right: 15px;
-    white-space: nowrap; /* Предотвращает перенос логотипа на новую строку */
+    white-space: nowrap;
 }
 
 .logo .highlight {
-    color: #ff0000; /* Красный цвет для слова "Яндекс" */
+    color: #ff0000;
 }
 
 /* Поисковая строка */
 .search-input {
-    flex: 1; /* Растягиваем поле ввода на всю доступную ширину */
+    flex: 1;
     padding: 8px 12px;
     margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #ffd700;
+    border-radius: 0;
     font-size: 16px;
+    outline: none;
 }
 
 /* Кнопка "Найти" */
 .search-button {
     padding: 8px 20px;
-    border: 1px solid #ccc;
+    border: none;
     background-color: #ffd700;
-    border-radius: 4px;
-    cursor: pointer;
+    color: #000;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
+    clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
 }
 
 .search-button:hover {
     background-color: #ffc107;
+}
+
+/* Пример фразы */
+.example-phrase {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.example-link {
+    color: #1a73e8;
+    cursor: pointer;
+}
+
+.example-link:hover {
+    text-decoration: underline;
 }

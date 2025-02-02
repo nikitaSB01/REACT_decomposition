@@ -1,8 +1,9 @@
+import { useState, useEffect } from "react";
 import "../styles/Header.css";
 
 /**
- * Header – отображает ссылки навигации и строку поиска с кнопкой,
- * при этом логотип выравнивается по горизонтали с поисковой строкой.
+ * Header – отображает ссылки навигации, строку поиска с кнопкой и
+ * пример фразы, который меняется каждые 5 секунд.
  */
 const Header = () => {
   // Данные для списка ссылок
@@ -16,6 +17,43 @@ const Header = () => {
     { text: "Эфир", link: "https://example.com/broadcast" },
     { text: "Ещё", link: "https://example.com/more" },
   ];
+
+  // Массив примеров фраз для поиска
+  const examplePhrases = [
+    "фаза луны сегодня",
+    "погода в Москве",
+    "новости спорта",
+    "курс доллара",
+    "программа телепередач",
+  ];
+
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Автоматическая смена примера фразы каждые 5 секунд
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPhraseIndex(
+        (prevIndex) => (prevIndex + 1) % examplePhrases.length
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Функция для "поиска"
+  const handleSearch = (query?: string) => {
+    const finalQuery = query || searchQuery;
+    console.log("Ищем:", finalQuery);
+    // Здесь можно добавить функциональность реального поиска
+  };
+
+  // Функция для обработки нажатия на пример фразы
+  const handleExampleClick = () => {
+    const selectedPhrase = examplePhrases[currentPhraseIndex];
+    setSearchQuery(selectedPhrase);
+    handleSearch(selectedPhrase);
+  };
 
   return (
     <div className="header">
@@ -41,8 +79,20 @@ const Header = () => {
           type="text"
           className="search-input"
           placeholder="Найдётся всё..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <button className="search-button">Найти</button>
+        <button className="search-button" onClick={() => handleSearch()}>
+          Найти
+        </button>
+      </div>
+
+      {/* Пример фразы под строкой поиска */}
+      <div className="example-phrase">
+        Найдётся всё. Например,{" "}
+        <span className="example-link" onClick={handleExampleClick}>
+          {examplePhrases[currentPhraseIndex]}
+        </span>
       </div>
     </div>
   );
