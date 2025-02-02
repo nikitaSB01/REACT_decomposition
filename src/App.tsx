@@ -8,6 +8,7 @@ import Weather from "./components/Weather";
 import Visited from "./components/Visited";
 import TVProgram from "./components/TVProgram";
 import Broadcast from "./components/Broadcast";
+import Maps from "./components/Maps";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Visited />
           </div>
           <div>
+            <Maps />
             <TVProgram />
           </div>
           <div>
