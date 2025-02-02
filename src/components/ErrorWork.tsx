@@ -13,8 +13,14 @@ const ErrorWork = () => {
         className="error-image"
       ></img>
       <div className="error-text">
-        <h3>Работа над ошибками</h3>
-        <p>Смотрите на myЯндекс и запоминайте</p>
+        <a
+          href="https://example.com/more"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h3>Работа над ошибками</h3>
+          <p>Смотрите на myЯндекс и запоминайте</p>
+        </a>
       </div>
     </div>
   );
