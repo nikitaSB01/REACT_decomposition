@@ -7,6 +7,7 @@ import Advertising from "./components/Advertising";
 import Weather from "./components/Weather";
 import Visited from "./components/Visited";
 import TVProgram from "./components/TVProgram";
+import Broadcast from "./components/Broadcast";
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
           </div>
           <div>
             <TVProgram />
+          </div>
+          <div>
+            <Broadcast />
           </div>
         </div>
       </div>
