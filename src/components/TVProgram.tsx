@@ -1,5 +1,5 @@
 import InfoBlock from "./InfoBlock";
-
+import "../styles/TVProgram.css";
 /**
  * TVProgram – отображает телепрограмму.
  */
@@ -17,8 +17,8 @@ const TVProgram = () => {
         {shows.map((tv, index) => (
           <li key={index}>
             <a href="https://example.com/news1">
-              <span>{tv.time}</span> <strong>{tv.title}</strong>{" "}
-              <span>{tv.channel}</span>
+              <span className="span-time">{tv.time}</span>{" "}
+              <strong>{tv.title}</strong> <span>{tv.channel}</span>
             </a>
           </li>
         ))}

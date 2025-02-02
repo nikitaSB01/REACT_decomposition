@@ -89,7 +89,7 @@ const Header = () => {
 
       {/* Пример фразы под строкой поиска */}
       <div className="example-phrase">
-        Найдётся всё. Например,{" "}
+        Например,{" "}
         <span className="example-link" onClick={handleExampleClick}>
           {examplePhrases[currentPhraseIndex]}
         </span>
