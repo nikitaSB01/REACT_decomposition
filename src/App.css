@@ -39,7 +39,6 @@ body {
 /* Контейнер для логотипа и шапки */
 .header-container {
   display: flex;
-  margin-top: 20px;
   align-items: center; /* Выравнивание по вертикали */
   position: relative;
   width: 100%;
@@ -49,7 +48,7 @@ body {
 /* Логотип размещаем левее основного контента */
 .logo {
   position: absolute;
-  left: -120px; /* Смещаем логотип влево */
+  left: -130px; /* Смещаем логотип влево */
   font-size: 24px;
   font-weight: bold;
   color: #000;

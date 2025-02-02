@@ -10,10 +10,12 @@ function App() {
       {/* Основной контент (все блоки в столбец) */}
       <div className="content">
         <div className="top-section">
-          <NewsList />
+          <div>
+            <NewsList />
+            <ExchangeRates />
+          </div>
           <ErrorWork />
         </div>
-        <ExchangeRates />
         {/* Шапка с логотипом и поисковой строкой */}
         <div className="header-container">
           <Header />
